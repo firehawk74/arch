@@ -27,6 +27,7 @@ t  # change a partition type
 n  # new partition
 3  # partion number 3
 
+
 w
 q
 EOF
