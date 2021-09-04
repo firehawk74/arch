@@ -3,9 +3,9 @@
 DYSK=/dev/sda
 
 #  rozmiary partycji w MiB
-# PART_EFI=512       #512 MiB
-# PART_ROOT=43.9    #40 GiB
-# PART_SWAP=11.9     #~8 GiB
+PART_EFI=512       #512 MiB
+PART_ROOT=43.9    #40 GiB
+PART_SWAP=11.9     #~8 GiB
 
 
 echo "label: gpt
