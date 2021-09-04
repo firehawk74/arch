@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo Example: sda
 
 read -p '/dev/' hardDrivevar
@@ -5,12 +7,12 @@ read -p '/dev/' hardDrivevar
 fdisk /dev/$hardDrivevar << EOF
 g
 n
-p
 1
 
 +550M
+t
+1
 n
-p
 2
 
 +43.9G
@@ -20,8 +22,8 @@ p
 
 +11.9G
 n
-t
-82
+1
+
 
 w
 q
@@ -52,3 +54,5 @@ mount /dev/sda2 /mnt
 swapon /dev/sda3
 mkdir /mnt/home
 mount /dev/sdb1 /mnt/home
+
+
