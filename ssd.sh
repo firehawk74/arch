@@ -42,8 +42,10 @@ EOF
 
 mkfs.vfat -F32 -n EFI /dev/sda1
 mkfs.ext4 -L root /dev/sda2
+mkswap -L swap /dev/sda3
 mkfs.ext4 -L dane /dev/sdb1
 
 mount /dev/sda2 /mnt
+swapon /dev/sda3
 mkdir /mnt/home
 mount /dev/sdb1 /mnt/home
