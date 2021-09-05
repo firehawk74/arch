@@ -2,7 +2,7 @@
 
 ##### Małe podsumowanie:
 
-##### Odśwież serwery i zainsatluj git- pacman -Sy git
+##### Odśwież serwery i zainstaluj git - pacman -Sy git
 ##### Dzielenie dysku na partycję
 ##### Formatowanie partycji
 ##### Zamontuj partycje
