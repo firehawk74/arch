@@ -6,9 +6,6 @@
 ##### Dzielenie dysku na partycję
 ##### Formatowanie partycji
 ##### Zamontuj partycje
-##### Zainstaluj pakiety podstawowe w /mnt (pacstrap /mnt base linux linux-firmware git vim intel-ucode (lub amd-ucode))
-##### Wygeneruj plik FSTAB za pomocą genfstab -U /mnt >> /mnt/etc/FSTAB
-##### Chroot w z arch-chroot /mnt
 ##### Pobierz repozytorium git z https://gitlab.com/enemysmasher/arch.git klonowania git
 
 ##### cd arch
