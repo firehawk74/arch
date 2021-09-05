@@ -16,19 +16,14 @@ n
 1
 
 +550M
+t
+1
 n
 2
 
 
-t
-1
-83
-t
-2
-82
-
-
 w
+q
 EOF
 
 
@@ -43,7 +38,9 @@ n
 
 
 w
+q
 EOF
+
 
 
 mkfs.vfat -F32 -n EFI /dev/sda1
