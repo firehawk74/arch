@@ -52,3 +52,11 @@ swapon /mnt/SWAP
 mount /dev/sda2 /mnt
 mkdir /mnt/home
 mount /dev/sdb1 /mnt/home
+
+mv arch-chroot.sh /mnt
+
+pacstrap -i /mnt base base-devel bash-completion intel-ucode iucode-tool linux linux-firmware linux-headers nano dhcpcd neofetch
+
+genfstab -U /mnt >> /mnt/etc/fstab
+
+arch-chroot /mnt/
