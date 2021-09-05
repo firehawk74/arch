@@ -1,4 +1,10 @@
 #!/bin/bash
+loadkeys pl
+setfont Lat2-Terminus16
+timedatectl set-ntp true
+wipefs -a /dev/sda
+wipefs -a /dev/sdb
+fdisk -l
 
 echo Example: sda
 
