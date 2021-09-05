@@ -19,13 +19,13 @@ ${sda}3 : size=${11900}MiB, type=0657FD6D-A4AB-43C4-84E5-0933C84B4F4F
 DYSK=/dev/sdb
 
 #rozmiary partycji w MiB
-PART_HOME=223570   #240 GiB
+PART_HOME=190735    #240 GiB
 
 echo "label: gpt
 device: ${sdb}
 unit: sectors
 
-${sdb}1 : size=${223570}MiB, type=0FC63DAF-8483-4772-8E79-3D69D8477DE4
+${sdb}1 : size=${190735 }MiB, type=0FC63DAF-8483-4772-8E79-3D69D8477DE4
 " | sfdisk ${sdb}
 
 
