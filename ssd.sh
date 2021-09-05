@@ -16,10 +16,16 @@ n
 1
 
 +550M
-t
-1
 n
 2
+
+
+t
+1
+83
+t
+2
+82
 
 
 w
@@ -39,24 +45,27 @@ n
 w
 EOF
 
-dd if=/dev/zero of=/mnt/SWAP bs= 1M count=8192
 
 mkfs.vfat -F32 -n EFI /dev/sda1
 mkfs.ext4 -L root /dev/sda2
+#mkswap -L swap /dev/sda3
 mkfs.ext4 -L dane /dev/sdb1
 
-mkswap /mnt/SWAP
-chmod 0600 /mnt/SWAP
-swapon /mnt/SWAP
-
 mount /dev/sda2 /mnt
+#swapon /dev/sda3
 mkdir /mnt/home
 mount /dev/sdb1 /mnt/home
 
 mv arch-chroot.sh /mnt
 
+sed -i 's|#Color|Color|' /etc/pacman.conf
+sed -i 's|#ParallelDownloads = 5|ParallelDownloads = 25|' /etc/pacman.conf
+
 pacstrap -i /mnt base base-devel bash-completion intel-ucode iucode-tool linux linux-firmware linux-headers nano dhcpcd neofetch
 
+
 genfstab -U /mnt >> /mnt/etc/fstab
+
+
 
 arch-chroot /mnt/
